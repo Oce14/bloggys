@@ -35,7 +35,7 @@ const CommentsSection = ({ postId }: CommentsSectionProps) => {
 
   return (
     <div className="mt-6">
-      <h3 className="text-lg font-semibold">Commentaires:</h3>
+      <h3 className="text-lg text-black font-semibold">Commentaires:</h3>
       {comments.length === 0 ? (
         <p>Aucun commentaire trouvé.</p>
       ) : (
@@ -45,9 +45,9 @@ const CommentsSection = ({ postId }: CommentsSectionProps) => {
               key={comment.id}
               className="mt-3 bg-gray-100 rounded-lg p-4 shadow"
             >
-              <p className="font-semibold">
+              <p className="font-semibold text-black">
                 {comment.name}{" "}
-                <span className="text-sm text-gray-600">({comment.email})</span>
+                <span className="text-sm text-gray-400">({comment.email})</span>
               </p>
               <p className="text-gray-800">{comment.body}</p>
             </li>
