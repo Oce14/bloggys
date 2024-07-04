@@ -1,8 +1,9 @@
 import Link from "next/link";
 import MainLayout from "./components/MainLayout";
 import { getServerSession } from "next-auth";
-import { authConfig } from "./lib/auth";
+
 import { redirect } from "next/navigation";
+import { authConfig } from "./lib/auth";
 
 export default async function HomePage() {
   const session = await getServerSession(authConfig);
